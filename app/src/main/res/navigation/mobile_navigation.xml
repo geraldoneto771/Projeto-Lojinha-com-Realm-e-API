@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/telaHome">
+    <fragment
+        android:id="@+id/telaHome"
+        android:name="com.example.lojinhasea.ui.home.TelaHome"
+        android:label="fragment_tela_home"
+        tools:layout="@layout/fragment_tela_home" >
+        <action
+            android:id="@+id/action_telaHome_to_listaProduto"
+            app:destination="@id/listaProduto"
+            app:popUpTo="@id/telaHome" />
+        <action
+            android:id="@+id/action_telaHome_to_cadastroCategoria"
+            app:destination="@id/cadastroCategoria"
+            app:popUpTo="@id/telaHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroProduto"
+        android:name="com.example.lojinhasea.ui.produto.CadastroProduto"
+        android:label="fragment_cadastro_produto"
+        tools:layout="@layout/fragment_cadastro_produto" />
+    <fragment
+        android:id="@+id/listaProduto"
+        android:name="com.example.lojinhasea.ui.produto.ListaProduto"
+        android:label="fragment_lista_produto"
+        tools:layout="@layout/fragment_lista_produto" >
+        <action
+            android:id="@+id/action_listaProduto_to_cadastroProduto"
+            app:destination="@id/cadastroProduto"
+            app:popUpTo="@id/listaProduto" />
+        <action
+            android:id="@+id/action_listaProduto_to_editarProduto"
+            app:destination="@id/editarProduto" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarProduto"
+        android:name="com.example.lojinhasea.ui.produto.EditarProduto"
+        android:label="fragment_editar_produto" />
+    <fragment
+        android:id="@+id/cadastroCategoria"
+        android:name="com.example.lojinhasea.ui.produto.CadastroCategoria"
+        android:label="fragment_cadastro_categoria"
+        tools:layout="@layout/fragment_cadastro_categoria" />
+</navigation>

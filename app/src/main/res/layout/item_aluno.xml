@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="ItemProductUI" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="4dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/relative_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/field_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Produto"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/button_action"
+                    android:background="#9266E4"
+                    android:padding="6dp"
+                    android:text="Categoria"
+                    android:layout_marginRight="16dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+                <ImageButton
+                    android:id="@+id/button_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:layout_margin="0dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_baseline_more_vert_24"
+                    android:layout_alignParentEnd="true"/>
+
+            <RelativeLayout
+                android:id="@+id/more_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/sale_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/description"
+                    android:layout_marginTop="8dp"
+                    android:text="Qtd. Vendida: "
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/sale_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/description"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="8dp"
+                    android:text="0"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/stock_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sale_text"
+                    android:layout_marginTop="8dp"
+                    android:text="Qtd.em Estoque: "
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/stock_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sale_text"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="8dp"
+                    android:text="0"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_below="@id/stock_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="#9266E4"
+                    android:padding="6dp"
+                    android:text="R$"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+                <EditText
+                    android:id="@+id/qtdSale"
+                    android:layout_below="@+id/price"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Quantidade desejada"
+                    android:padding="8dp"
+                    android:background="#EADBFF"
+                    android:textColorHint="#9A9A9A"
+                    />
+                <Button
+                    android:id="@+id/button_buy"
+                    android:layout_below="@+id/price"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="11dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#4287FF"
+                    android:text="Comprar"/>
+            </RelativeLayout>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
